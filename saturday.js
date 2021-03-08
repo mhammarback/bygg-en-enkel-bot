@@ -31,10 +31,6 @@ const isItSaturdayToday = (date) => {
   }
 }
 
-
-
-// Denna funktion ska returnera hur många dagar det är
-// kvar till lördag
 const daysUntil = (date) => {
   const newDate = new Date(date)
   const saturday = 6

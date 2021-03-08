@@ -10,9 +10,9 @@ if (isItSaturdayToday(date) === undefined && daysUntil(date) === undefined) {
   document.getElementById('button-container').style.display = 'none';
 } else {
   if (isItSaturdayToday(date) && daysUntil(date) === 0) {
-    document.querySelector('.result-row').innerHTML = 'Ja, det är lördag idag!';
+    document.querySelector('.result-row').innerHTML = 'Yes, Today is saturday!';
   } else {
-    document.querySelector('.result-row').innerHTML = 'Nej, det är inte lördag idag, det är &nbsp;<u>' + daysUntil(date) + '</u>&nbsp; dagar kvar.';
+    document.querySelector('.result-row').innerHTML = 'No, it is not saturday, it is &nbsp;<u>' + daysUntil(date) + '</u>&nbsp; days left.';
   }
 }
 
