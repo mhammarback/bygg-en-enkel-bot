@@ -2,64 +2,71 @@
 
 html,
 body {
-    font-family: 'Roboto', sans-serif;
-    color: white;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #logo {
-    width: 46px;
-    height: 46px; 
-    margin-right: 5px;
+  width: 46px;
+  height: 46px; 
+  margin-right: 5px;
 }
 
 .container {
-    height: 100vh;
-    background-color: #00427a;
+  height: 100vh;
+  background-color: #00427a;
 }
 
 .wrapper {
-    width: 600px;
+  width: 600px;
 }
 
 .margin-10 {
-    margin: 10px;
+  margin: 10px;
 }
 
 .result-row {
-    overflow: hidden;
-    padding: 8px;
-    min-height: 57px;
-    margin-bottom: 12px;
+  overflow: hidden;
+  padding: 8px;
+  min-height: 57px;
+  margin-bottom: 12px;
 }
 
 .error-span {
-    color: red;
+  color: red;
 }
 
 button {
-    padding: 12px;
-    border: 2px solid white;
-    border-radius: 12px;
-    color: white;
-    font-size: 15px;
-    background-color: transparent;
-    min-width: 140px;
-    user-select: none;
-    outline:none;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 12px;
+  color: white;
+  font-size: 15px;
+  background-color: transparent;
+  min-width: 140px;
+  user-select: none;
+  outline:none;
 }
 
 /* Utility */
 .flex-row {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 600px) {
+  .result-row {
+    flex-direction: column;
+  }
 }

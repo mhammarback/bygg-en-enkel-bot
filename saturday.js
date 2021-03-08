@@ -1,20 +1,68 @@
-// Här är filen du ska jobba i! En funktion ska svara på
-// om det är lördag idag eller inte och en funktion ska
-// svara på hur många dagar det är kvar.
 
-// Den här funktionen ska returnera true om det är lördag
-// och false om det inte är lördag
 const isItSaturdayToday = (date) => {
-  return
+  const newDate = new Date(date)
+
+  let weekDay = new Array(7)
+  weekDay[0] = "sunday"
+  weekDay[1] = "monday"
+  weekDay[2] = "tuesday"
+  weekDay[3] = "wednesday"
+  weekDay[4] = "thursday"
+  weekDay[5] = "friday"
+  weekDay[6] = "saturday"
+
+  let day = weekDay[newDate.getDay()]
+
+  if (newDate.getDay() === 6) {
+    document.querySelector("#greeting").innerHTML = "Yay it's finally Saturday!"
+    return true
+  } 
+  else if (newDate.getDay() === 5) {
+    document.querySelector("#greeting").innerHTML = "Friday vibes!"
+    return false
+  }
+  else if (newDate.getDay() === 0) {
+    document.querySelector("#greeting").innerHTML = " Slow sundays are the best"
+    return false
+  }
+  else {
+    document.querySelector("#greeting").innerHTML = "Today it's "+ day +"!"
+    return false
+  }
 }
+
+
 
 // Denna funktion ska returnera hur många dagar det är
 // kvar till lördag
 const daysUntil = (date) => {
-  return
+  const newDate = new Date(date)
+  const saturday = 6
+  const remainigDays = saturday - newDate.getDay();
+
+  return remainigDays
 }
 
 export {
   isItSaturdayToday,
   daysUntil
 }
+
+
+/*
+const isItSaturdayToday = (date) => {
+  if (date === 0) {
+    return true;
+  } else {
+    return false;
+  }  
+} 
+
+const daysUntil = (date) => {
+  if (date !== 0) {
+    return date.getDay() -2 ;
+  } else {
+    return 0;
+  } 
+}
+*/
